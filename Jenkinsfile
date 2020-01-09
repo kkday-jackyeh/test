@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Test Timeout') {
       steps {
-        timeout(time: 2, unit: 'MINUTES') {
+        timeout(time: 2, unit: 'HOURS') {
           sh 'sh delay.sh'
         }
       }

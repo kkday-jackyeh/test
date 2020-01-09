@@ -1,3 +1,3 @@
 #!/bin/bash
-sleep 180
+sleep 10800
 echo $(date)
