@@ -5,7 +5,7 @@ pipeline {
     stage('Test Timeout') {
       steps {
         timeout(time: 2, unit: 'MINUTES') {
-          sh -c 'sh delay.sh'
+          sh 'sh delay.sh'
         }
       }
     }
