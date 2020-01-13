@@ -1,12 +1,20 @@
 pipeline {
   agent any
 
+  options {
+    timeout(time: 3, unit: 'MINUTES') 
+  }
+
   stages {
-    stage('Test Timeout') {
+    stage('Test Timeout 1') {
       steps {
-        timeout(time: 2, unit: 'HOURS') {
-          sh 'sh delay.sh'
-        }
+        sh 'sh delay.sh'
+      }
+    }
+
+    stage('Test Timeout 2') {
+      steps {
+        sh 'sh delay.sh'
       }
     }
   }
